@@ -22,19 +22,18 @@ public class Balls{
     }
 
     void setup(){
-        //changes the Background color
-        main.background(0);
-        ball = new Ball(main.width/2.0f, main.height*.10f, 50.f, main, main.color(main.random(255), main.random(255), main.random(225)));
+        //new ball
+        ball = new Ball(main.width/2.0f, main.height*.10f, 100.f, main, main.color(main.random(255), main.random(255), main.random(225)));
     }
 
     void draw(){
         //Draws stuff on screen
         main.noStroke();
-        main.background(0);
         ball.draw();
         
     }
     public void keyPressed(){
+        //adds directional inputs to the balls
         if (main.key == 'q'){
             ball.faster();
         }
