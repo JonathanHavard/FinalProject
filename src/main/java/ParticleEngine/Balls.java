@@ -31,30 +31,43 @@ public class Balls{
         main.noStroke();
         
     }
+
+    public void mousePressed(){
+        for(int i=0; i<balls.size(); i++){
+            //function to change the color of the balls (doesn't work :\ )
+            balls.get(i).colorChange(ball);}
+
+    }
     public void keyPressed(){
-        //adds directional inputs to the balls
+        //adds directional inputs to the balls (also doesn't work :[ )
         if (main.key == 'q'){
             for(int i=0; i<balls.size(); i++){
+                //speeds up particles
                 balls.get(i).faster();}
         }
         if (main.key == 'e'){
             for(int i=0; i<balls.size(); i++){
+                //slows particles
                 balls.get(i).slower();}
         }
         if (main.key =='w'){
             for(int i=0; i<balls.size(); i++){
+                //moves particles up
                 balls.get(i).uVel();}
         }
         if (main.key =='s'){
             for(int i=0; i<balls.size(); i++){
+                //moves particles down
                 balls.get(i).dVel();}
         }
         if (main.key =='a'){
             for(int i=0; i<balls.size(); i++){
+                //moves particles left
                 balls.get(i).lVel();}
         }
         if (main.key =='d'){
             for(int i=0; i<balls.size(); i++){
+                //moves particles right
                 balls.get(i).rVel();}
         }
 

@@ -85,6 +85,10 @@ void slower(){
         // xVel=;
         // yVel=;
     }
+
+    public void colorChange(Ball ball_) {
+        ball_.main.color(main.random(255), main.random(255), main.random(255));
+    }
     
 
 }
