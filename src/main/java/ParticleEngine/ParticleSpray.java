@@ -23,18 +23,19 @@ public class ParticleSpray {
     // adds balls to the array
     void init(){
         for (int i=0; i<bllCount; i++){
-            float width = main.random(main.width);
-            float height = main.random(main.height);
+            float x = main.random(main.width);
+            float y = main.random(main.height);
             float radius = main.random(maxRad);
             float red = main.random(255);
             float green = main.random(255);
             float blue = main.random(255);
             //randomized the balls
 
-            Ball ball = new Ball(width, height,  radius, main, main.color(red, green, blue));
+            Ball ball = new Ball(x, y,  radius, main, main.color(red, green, blue));
             balls.add(ball);
         }
     }
+
 
     void draw()
     {

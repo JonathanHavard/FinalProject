@@ -26,6 +26,9 @@ public class Ball {
         ballColor = c;
 
         main = main_;
+
+        xVel = main.random(-10, 10);
+        yVel = main.random(-10, 10);
     }
 
     void draw(){
@@ -57,10 +60,20 @@ void slower(){
     xVel*=0.9;
 }
     void lVel(){
+        if (x_direction == 1){
         xVel--;
+        }
+        if (x_direction == -1){
+            xVel++;
+            }
     }
     void rVel(){
+        if (x_direction == 1){
         xVel++;
+        }
+        if (x_direction == -1){
+            xVel--;
+        }
     }
     void dVel(){
         yVel++;
@@ -72,5 +85,6 @@ void slower(){
         // xVel=;
         // yVel=;
     }
+    
 
 }

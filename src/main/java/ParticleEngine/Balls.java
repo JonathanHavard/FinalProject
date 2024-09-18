@@ -29,28 +29,33 @@ public class Balls{
     void draw(){
         //Draws stuff on screen
         main.noStroke();
-        ball.draw();
         
     }
     public void keyPressed(){
         //adds directional inputs to the balls
         if (main.key == 'q'){
-            ball.faster();
+            for(int i=0; i<balls.size(); i++){
+                balls.get(i).faster();}
         }
         if (main.key == 'e'){
-            ball.slower();
+            for(int i=0; i<balls.size(); i++){
+                balls.get(i).slower();}
         }
         if (main.key =='w'){
-            ball.uVel();
+            for(int i=0; i<balls.size(); i++){
+                balls.get(i).uVel();}
         }
         if (main.key =='s'){
-            ball.dVel();
+            for(int i=0; i<balls.size(); i++){
+                balls.get(i).dVel();}
         }
         if (main.key =='a'){
-            ball.lVel();
+            for(int i=0; i<balls.size(); i++){
+                balls.get(i).lVel();}
         }
         if (main.key =='d'){
-            ball.rVel();
+            for(int i=0; i<balls.size(); i++){
+                balls.get(i).rVel();}
         }
 
     }
