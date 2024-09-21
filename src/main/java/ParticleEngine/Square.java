@@ -8,22 +8,22 @@ package ParticleEngine;
 
 import processing.core.*;
 
-public class Ball {
+public class Square {
     PApplet main; //the main class -- provides all the functionality of processing
 
-    float x,y; //location of ball
+    float x,y; //location of square
     float xVel = 10;
     float yVel = 10; //Y velocity
     float y_direction = 1;
     float x_direction = 1;
-    float radius; //ball size
-    int ballColor;
+    float size; //square size
+    int squareColor;
 
-    Ball(float x_, float y_, float radius_, PApplet main_, int c){
+    Square(float x_, float y_, float size_, PApplet main_, int c){
         x = x_;
         y = y_;
-        radius = radius_;
-        ballColor = c;
+        size = size_;
+        squareColor = c;
 
         main = main_;
 
@@ -32,31 +32,27 @@ public class Ball {
     }
 
     void draw(){
-        //draws an ellipse
-        main.ellipse(x, y, radius, radius);
-        main.fill(ballColor);
+        //draws a square
+        main.square(x, y, size);
+        main.fill(squareColor);
         move();
 
     }
     void move(){
-        // ball movement
+        // square movement
         y += yVel*y_direction;
         x += xVel*x_direction;
         if(y>main.height || y<0){
             y_direction *= -1;
-            yVel*=0.9;
         }
         if(x>main.width || x<0){
             x_direction *= -1;
-            xVel*=0.9;
         }
     }
     void faster(){
         //increases ball speed
     yVel*=1.1;
     xVel*=1.1;
-
-        System.out.println("running???");
 }
 void slower(){
         //decreases ball speed
@@ -90,8 +86,8 @@ void slower(){
         // yVel=;
     }
 
-    public void colorChange(Ball ball_) {
-        ball_.main.color(main.random(255), main.random(255), main.random(255));
+    public void colorChange(Square square_) {
+        square_.main.color(main.random(255), main.random(255), main.random(255));
     }
     
 
