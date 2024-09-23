@@ -25,7 +25,7 @@ Ball(float x_, float y_, float radius_, PApplet main_, int c){
     yVel = main.random(-10, 10);
 }
 
-void Draw(float x, float y, size, radius_){
+void Draw(float x, float y, float size, float radius_){
     //draws an ellipse
     main.ellipse(x, y, size, size);
     main.fill(particleColor);

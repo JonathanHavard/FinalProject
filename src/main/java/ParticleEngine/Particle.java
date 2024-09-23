@@ -17,7 +17,7 @@ public class Particle {
     float y_direction = 1;
     float x_direction = 1;
     float size; //particle size
-    int particleColor;
+    static int particleColor;
     float maxVel;
     float minVel;
 
@@ -86,7 +86,7 @@ void slower(){
         particle_.main.color(main.random(255), main.random(255), main.random(255));
     }
     public void draw() {
-        //Ball.Draw(0,0, main.random(10,50), 50);
+        Ball.Draw(1, 1,10, 10);
     }
     
 

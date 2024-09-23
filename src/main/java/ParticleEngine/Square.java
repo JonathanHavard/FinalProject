@@ -6,17 +6,17 @@
  */
 package ParticleEngine;
 
+import javafx.css.Size;
 import processing.core.*;
 
 public class Square extends Particle{
     PApplet main;
-Square(){
+Square(float x_, float y_, float size_, int c){
     x = x_;
     y = y_;
-    size = radius_;
+    size = size_;
     particleColor = c;
 
-    main = main_;
 
     maxVel = 50; 
     minVel = 1;

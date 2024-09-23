@@ -53,7 +53,7 @@ public class Particles{
 
     void draw(){
         for (int i=0; i<ptCount/2; i++){
-            particles.get(i).Draw();
+            particles.get(i).draw();
             //draws the particles
         }
     }
