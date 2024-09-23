@@ -10,7 +10,7 @@ package ParticleEngine;
 import processing.core.*;
 
 public class Main extends PApplet{
-    Balls balls;
+    Particles particles;
 
     public static void main(String[] args) {
         PApplet.main("ParticleEngine.Main");
@@ -19,19 +19,19 @@ public class Main extends PApplet{
     public void settings(){
         //Changes the size of the screen
         size(1280, 720);
-        balls = new Balls(this); //instantiates ball
+        particles = new Particles(this); //instantiates particle
     }
     public void setup(){
-        balls.setup();
-        balls.init();
+        particles.setup();
+        particles.init();
     }
-    public void draw(){ //draws balls
+    public void draw(){ //draws particles
         this.background(0);
-        balls.draw();
-        balls.draw();
+        particles.draw();
+        particles.draw();
     }
     public void keyPressed(){
-        balls.keyPressed(key);//calls the balls key pressed function
+        particles.keyPressed(key);//calls the particles key pressed function
     }
 
 

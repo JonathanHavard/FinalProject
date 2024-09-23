@@ -1,63 +1,59 @@
 /*
  * Coder: Jonathan Havard
  * Date: Sep. 2024
- * Description: Ball -- a moving ball. 
+ * Description: Particle -- a moving particle. 
  * 
  */
 package ParticleEngine;
 
 import processing.core.*;
 
-public class Square {
+public class Particle {
     PApplet main; //the main class -- provides all the functionality of processing
 
-    float x,y; //location of square
+    float x,y; //location of particle
     float xVel = 10;
     float yVel = 10; //Y velocity
     float y_direction = 1;
     float x_direction = 1;
-    float size; //square size
-    int squareColor;
+    float size; //particle size
+    int particleColor;
+    float maxVel;
+    float minVel;
 
-    Square(float x_, float y_, float size_, PApplet main_, int c){
-        x = x_;
-        y = y_;
-        size = size_;
-        squareColor = c;
-
-        main = main_;
-
-        xVel = main.random(-10, 10);
-        yVel = main.random(-10, 10);
-    }
-
-    void draw(){
-        //draws a square
-        main.square(x, y, size);
-        main.fill(squareColor);
-        move();
-
-    }
     void move(){
-        // square movement
+        // particle movement
         y += yVel*y_direction;
         x += xVel*x_direction;
         if(y>main.height || y<0){
             y_direction *= -1;
+           
         }
         if(x>main.width || x<0){
             x_direction *= -1;
+
         }
     }
     void faster(){
-        //increases ball speed
+        //increases particle speed
+        if (yVel<maxVel){
+            //adds a speed cap
     yVel*=1.1;
+        }
+        if (xVel<maxVel){
+            //adds a speed cap
     xVel*=1.1;
+    }
+        
 }
 void slower(){
-        //decreases ball speed
+        //decreases particle speed
+    if (yVel>minVel){
     yVel*=0.9;
+    }
+    if (xVel>minVel){
     xVel*=0.9;
+    }
 }
     void lVel(){
         if (x_direction == 1){
@@ -86,8 +82,11 @@ void slower(){
         // yVel=;
     }
 
-    public void colorChange(Square square_) {
-        square_.main.color(main.random(255), main.random(255), main.random(255));
+    public void colorChange(Particle particle_) {
+        particle_.main.color(main.random(255), main.random(255), main.random(255));
+    }
+    public void draw() {
+        Ball.Draw(0,0, main.random(10,50), 50);
     }
     
 

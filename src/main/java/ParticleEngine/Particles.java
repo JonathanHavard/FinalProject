@@ -1,7 +1,7 @@
 /*
  * Coder: Jonathan Havard
  * Date: Sep. 2024
- * Description: Ball -- balls class for partical engine
+ * Description: Particle -- particles class for partical engine
  * 
  */
 package ParticleEngine;
@@ -9,25 +9,25 @@ package ParticleEngine;
 import processing.core.*;
 import java.util.ArrayList;
 
-public class Balls{
+public class Particles{
 
     PApplet main;
-    ArrayList<Ball> balls;
+    ArrayList<Particle> particles;
 
-    Ball ball;
+    Particle particle;
     int ptCount = 200;
-    //maximum ball count
+    //maximum particle count
     int maxRad = 40;
 
-    Balls(PApplet main_){
+    Particles(PApplet main_){
         main = main_;
-        balls = new ArrayList<Ball>();
+        particles = new ArrayList<Particle>();
     }
     void setup(){
-        //new ball
-        ball = new Ball(main.width/2.0f, main.height*.10f, 100.f, main, main.color(main.random(255), main.random(255), main.random(225)));
+        //new particle
+        particle = new Ball(maxRad, maxRad, maxRad, main, ptCount);
     }
-    // adds balls to the array
+    // adds particles to the array
     void init(){
         for (int i=0; i<ptCount; i++){
             //Summons a bunch of particles
@@ -36,14 +36,14 @@ public class Balls{
             float y = main.random(main.height);
             //random location y
             float radius = main.random(maxRad);
-            //randomized the ball colors
+            //randomized the particle colors
             float red = main.random(255);
             float green = main.random(255);
             float blue = main.random(255);
             
 
-            Ball ball = new Ball(x, y, radius, main, main.color(red, green, blue));
-            balls.add(ball);
+            Particle particle = new Particle();
+            particles.add(particle);
 
             // Square square = new Square(x, y, size, main, main.color(red, green, blue));
             // squares.add(square);
@@ -53,51 +53,50 @@ public class Balls{
 
     void draw(){
         for (int i=0; i<ptCount/2; i++){
-            balls.get(i).draw();
-            //draws the balls
+            particles.get(i).draw();
+            //draws the particles
         }
     }
     public void mousePressed(){
-        for(int i=0; i<balls.size(); i++){
-            //function to change the color of the balls (doesn't work :\ )
-            balls.get(i).colorChange(ball);}
+        for(int i=0; i<particles.size(); i++){
+            //function to change the color of the particles (doesn't work :\ )
+            particles.get(i).colorChange(particle);}
 
     }
     public void keyPressed(char key){
-        //adds directional inputs to the balls (also doesn't work :[ )
+        //adds directional inputs to the particles (also doesn't work :[ )
         if (main.key=='r'){
         
         }
         if (key == 'q'){
-            System.out.println("here??" + balls.size());
-            for(int i=0; i<balls.size(); i++){
+            for(int i=0; i<particles.size(); i++){
                 //speeds up particles
-                balls.get(i).faster();}
+                particles.get(i).faster();}
         }
         if (main.key == 'e'){
-            for(int i=0; i<balls.size(); i++){
+            for(int i=0; i<particles.size(); i++){
                 //slows particles
-                balls.get(i).slower();}
+                particles.get(i).slower();}
         }
         if (main.key =='w'){
-            for(int i=0; i<balls.size(); i++){
+            for(int i=0; i<particles.size(); i++){
                 //moves particles up
-                balls.get(i).uVel();}
+                particles.get(i).uVel();}
         }
         if (main.key =='s'){
-            for(int i=0; i<balls.size(); i++){
+            for(int i=0; i<particles.size(); i++){
                 //moves particles down
-                balls.get(i).dVel();}
+                particles.get(i).dVel();}
         }
         if (main.key =='a'){
-            for(int i=0; i<balls.size(); i++){
+            for(int i=0; i<particles.size(); i++){
                 //moves particles left
-                balls.get(i).lVel();}
+                particles.get(i).lVel();}
         }
         if (main.key =='d'){
-            for(int i=0; i<balls.size(); i++){
+            for(int i=0; i<particles.size(); i++){
                 //moves particles right
-                balls.get(i).rVel();}
+                particles.get(i).rVel();}
         }
 
     }
