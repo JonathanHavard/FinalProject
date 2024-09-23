@@ -25,7 +25,7 @@ public class Particles{
     }
     void setup(){
         //new particle
-        particle = new Ball(maxRad, maxRad, maxRad, main, ptCount);
+        particle = new Particle();
     }
     // adds particles to the array
     void init(){

@@ -11,7 +11,9 @@ import processing.core.*;
 public class Particle {
     PApplet main; //the main class -- provides all the functionality of processing
 
-    float x,y; //location of particle
+    static float x; //location of particle
+
+    float y;
     float xVel = 10;
     float yVel = 10; //Y velocity
     float y_direction = 1;
@@ -86,7 +88,9 @@ void slower(){
         particle_.main.color(main.random(255), main.random(255), main.random(255));
     }
     public void draw() {
-        Ball.Draw(1, 1,10, 10);
+        ball.Draw(1, 1,10, 10);
+        square.Draw(1,1,10);
+        triangle.Draw(1, 1, 10, 10);
     }
     
 
