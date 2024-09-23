@@ -6,12 +6,11 @@
  */
 package ParticleEngine;
 
-import javafx.css.Size;
 import processing.core.*;
 
-public class Ball extends Particle{
+public class Square extends Particle{
     PApplet main;
-Ball(float x_, float y_, float radius_, PApplet main_, int c){
+Square(){
     x = x_;
     y = y_;
     size = radius_;
@@ -19,15 +18,15 @@ Ball(float x_, float y_, float radius_, PApplet main_, int c){
 
     main = main_;
 
-    maxVel = 50;
+    maxVel = 50; 
     minVel = 1;
     xVel = main.random(-10, 10);
     yVel = main.random(-10, 10);
 }
 
-void Draw(float x, float y, size, radius_){
-    //draws an ellipse
-    main.ellipse(x, y, size, size);
+void Draw(){
+    //draws a square
+    main.square(x, y, size);
     main.fill(particleColor);
     move();
 

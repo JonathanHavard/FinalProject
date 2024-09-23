@@ -86,7 +86,7 @@ void slower(){
         particle_.main.color(main.random(255), main.random(255), main.random(255));
     }
     public void draw() {
-        Ball.Draw(0,0, main.random(10,50), 50);
+        //Ball.Draw(0,0, main.random(10,50), 50);
     }
     
 
