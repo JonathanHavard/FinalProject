@@ -28,7 +28,6 @@ public class Main extends PApplet{
     public void draw(){ //draws particles
         this.background(0);
         particles.draw();
-        particles.draw();
     }
     public void keyPressed(){
         particles.keyPressed(key);//calls the particles key pressed function
