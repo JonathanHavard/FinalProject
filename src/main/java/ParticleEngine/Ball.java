@@ -11,7 +11,7 @@ import processing.core.*;
 
 public class Ball extends Particle{
     PApplet main;
-Ball(){
+Ball(float x_, float y_, float radius_, int c, PApplet main_){
     x = x_;
     y = y_;
     size = radius_;
@@ -30,7 +30,7 @@ Ball(){
 
 void Draw(){
     //draws an ellipse
-    main.ellipse(Ball.x, y, size, size);
+    main.ellipse(x, y, size, size);
     main.fill(particleColor);
     move();
 

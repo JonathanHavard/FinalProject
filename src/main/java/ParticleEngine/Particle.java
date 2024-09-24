@@ -11,13 +11,12 @@ import processing.core.*;
 public class Particle {
     PApplet main; //the main class -- provides all the functionality of processing
 
-    static float x; //location of particle
-
-    float y;
-    float xVel = 10;
+    float x; //location of particle
+    float y; //location of particle
+    float xVel = 10; //X velocity
     float yVel = 10; //Y velocity
-    float y_direction = 1;
-    float x_direction = 1;
+    float y_direction = 1; //indicates the direction of the particle in the y direction (1 is up, -1 is down) 
+    float x_direction = 1; //indicates the direction of the particle in the X direction (1 is right, -1 is left)
     float size; //particle size
     static int particleColor;
     float maxVel;
@@ -88,9 +87,6 @@ void slower(){
         particle_.main.color(main.random(255), main.random(255), main.random(255));
     }
     public void draw() {
-        ball.Draw(1, 1,10, 10);
-        square.Draw(1,1,10);
-        triangle.Draw(1, 1, 10, 10);
     }
     
 

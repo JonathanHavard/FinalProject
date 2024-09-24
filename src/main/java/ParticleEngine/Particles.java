@@ -42,7 +42,7 @@ public class Particles{
             float blue = main.random(255);
             
 
-            Particle particle = new Particle();
+            Ball ball = new Ball(x, y, 100.0f, 255, main);
             particles.add(particle);
 
             // Square square = new Square(x, y, size, main, main.color(red, green, blue));
