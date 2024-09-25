@@ -26,7 +26,7 @@ Square(float x_, float y_, float size_, PApplet main_, int c){
     yVel = main.random(-10, 10);
 }
 
-void Draw(float x, float y, float size, float color){
+void draw(float x, float y, float size, float color){
     //draws a square
     main.square(x, y, size);
     main.fill(particleColor);

@@ -43,7 +43,9 @@ public class Particles{
             
 
             Ball ball = new Ball(x, y, 100.0f, 255, main);
-            particles.add(particle);
+            particles.add(ball);
+            particles.add(square);
+            particles.add(triangle);
 
             // Square square = new Square(x, y, size, main, main.color(red, green, blue));
             // squares.add(square);
