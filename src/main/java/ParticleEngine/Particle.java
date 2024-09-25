@@ -21,9 +21,46 @@ public class Particle {
     static int particleColor;
     float maxVel;
     float minVel;
+    Particle(float x_, float y_, float size_, int c, PApplet main_){
+        x = x_;
+        y = y_;
+        size = size_;
+        particleColor = c;
+    
+        main = main_;
+    
+        maxVel = 50;
+        minVel = 1;
+        xVel = main.random(-10, 10);
+        yVel = main.random(-10, 10);
+        x = 0;
+        y = 0;
+        size = main.random(10, 50);
+    }
 
     void move(){
         // particle movement
+        y += yVel*y_direction;
+        x += xVel*x_direction;
+        if(y>main.height || y<0){
+            y_direction *= -1;
+           
+        }
+        if(x>main.width || x<0){
+            x_direction *= -1;
+
+        }
+    }
+    float yVelInit = yVel;
+    void moveS(){
+            //Special particle movement
+            
+            if (y_direction==1){
+            yVel ++;
+            }
+            else{
+                yVel --;
+            }
         y += yVel*y_direction;
         x += xVel*x_direction;
         if(y>main.height || y<0){

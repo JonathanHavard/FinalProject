@@ -24,8 +24,7 @@ public class Particles{
         particles = new ArrayList<Particle>();
     }
     void setup(){
-        //new particle
-        particle = new Particle();
+
     }
     // adds particles to the array
     void init(){
@@ -35,20 +34,19 @@ public class Particles{
             //random location x
             float y = main.random(main.height);
             //random location y
-            float radius = main.random(maxRad);
-            //randomized the particle colors
             float red = main.random(255);
             float green = main.random(255);
             float blue = main.random(255);
             
 
-            Ball ball = new Ball(x, y, 100.0f, 255, main);
+            Ball ball = new Ball(x, y, 100.0f, main.color(red,green,blue), main);
             particles.add(ball);
-            particles.add(square);
+            
+            Triangle triangle = new Triangle(x, y, 100.0f, main, main.color(red,green,blue));
             particles.add(triangle);
-
-            // Square square = new Square(x, y, size, main, main.color(red, green, blue));
-            // squares.add(square);
+            
+            Square square = new Square(x, y, 100.0f, main, main.color(red, green, blue));
+            particles.add(square);
         }
     }
 

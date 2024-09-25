@@ -10,27 +10,15 @@ package ParticleEngine;
 import processing.core.*;
 
 public class Square extends Particle{
-    PApplet main;
 Square(float x_, float y_, float size_, PApplet main_, int c){
-    x = x_;
-    y = y_;
-    size = size_;
-    particleColor = c;
-
-    main = main_;
-
-
-    maxVel = 50; 
-    minVel = 1;
-    xVel = main.random(-10, 10);
-    yVel = main.random(-10, 10);
+    super(x_, y_, size_, c, main_);
 }
 
-void draw(float x, float y, float size, float color){
+public void draw(){
     //draws a square
-    main.square(x, y, size);
     main.fill(particleColor);
-    move();
+    main.square(x, y, size);
+    moveS();
 
 }
 }
