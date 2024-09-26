@@ -18,7 +18,7 @@ public class Main extends PApplet{
 
     public void settings(){
         //Changes the size of the screen
-        size(1280, 720);
+        size(1000,1000);
         particles = new Particles(this); //instantiates particle
     }
     public void setup(){

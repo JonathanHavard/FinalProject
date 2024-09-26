@@ -9,7 +9,6 @@ package ParticleEngine;
 import processing.core.*;
 import java.util.ArrayList;
 
-import javafx.scene.input.MouseButton;
 
 public class Particles{
 
@@ -17,7 +16,7 @@ public class Particles{
     ArrayList<Particle> particles;
 
     Particle particle;
-    int ptCount = 200;
+    int ptCount = 400;
     //maximum particle count
     int maxRad = 40;
 
@@ -44,8 +43,8 @@ public class Particles{
             Ball ball = new Ball(x, y, 100.0f, main.color(red,green,blue), main);
             particles.add(ball);
             
-            Triangle triangle = new Triangle(x, y, 100.0f, main, main.color(red,green,blue));
-            particles.add(triangle);
+            Ball2 ball2 = new Ball2(x, y, 100.0f, main, main.color(red,green,blue));
+            particles.add(ball2);
             
             Square square = new Square(x, y, 100.0f, main, main.color(red, green, blue));
             particles.add(square);
@@ -96,8 +95,16 @@ public class Particles{
                 //moves particles right
                 particles.get(i).rVel();}
 
+        }
+        if (main.key =='z'){
+            for(int i=0; i<particles.size(); i++){
+                //moves particles right
+                particles.get(i).Reverse();}
             }
 
+        }
+        void MousePressed(){
+            // MouseBurst();
         }
 
 }

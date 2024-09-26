@@ -33,8 +33,8 @@ public class Particle {
         minVel = 1;
         xVel = main.random(-10, 10);
         yVel = main.random(-10, 10);
-        x = 0;
-        y = 0;
+        x = 500;
+        y = 500;
         size = main.random(10, 50);
     }
 
@@ -51,7 +51,6 @@ public class Particle {
 
         }
     }
-    float yVelInit = yVel;
     void moveS(){
             //Special particle movement
             
@@ -59,7 +58,7 @@ public class Particle {
             yVel ++;
             }
             else{
-                yVel --;
+            yVel --;
             }
         y += yVel*y_direction;
         x += xVel*x_direction;
@@ -72,6 +71,27 @@ public class Particle {
 
         }
     }
+    void moveSR(){
+            //Special particle movement Reversed
+            
+            if (x_direction==1){
+                xVel ++;
+                }
+                else{
+                xVel --;
+                }
+            y += yVel*y_direction;
+            x += xVel*x_direction;
+            if(y>main.height || y<0){
+                y_direction *= -1;
+               
+            }
+            if(x>main.width || x<0){
+                x_direction *= -1;
+    
+            }
+    }
+
     void faster(){
         //increases particle speed
         if (yVel<maxVel){
@@ -115,17 +135,31 @@ void slower(){
     void uVel(){
         yVel--;
     }
-    void ResetPosS(){
-        System.out.println("resetting");
-        yVel = 100;
-        xVel = 100;
         
-    }
     public void colorChange(Particle particle_) {
         particle_.main.color(main.random(255), main.random(255), main.random(255));
     }
     public void draw() {
     }
+    public void Reverse(){
+        y_direction*=-1;
+        x_direction*=-1;
+    }
+}
+//     public void MouseBurst(){
+//     //     if (x<mouseX){
+//     //         xVel+=5;
+//     //     }
+//     //     if (x>mouseX){
+//     //         xVel-=5;
+//     //     }
+//     //     if (y<mouseY){
+//     //         xVel+=5;
+//     //     }
+//     //     if (x>mouseX){
+//     //         xVel-=5;
+//     //     }
+//     // }
     
 
-}
+// // }

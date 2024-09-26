@@ -1,0 +1,25 @@
+/*
+ * Coder: Jonathan Havard
+ * Date: Sep. 2024
+ * Description: Particle -- a moving particle. 
+ * 
+ */
+package ParticleEngine;
+
+//import javafx.css.Size;
+import processing.core.*;
+
+public class Ball2 extends Particle{
+Ball2(float x_, float y_, float radius_, PApplet main_, int c){
+    super(x_,y_,radius_, c, main_);    
+}
+
+public void draw(){
+    //draws an ellipse
+    main.fill(particleColor);
+    main.ellipse(x, y, size, size);
+    main.line(x-size, y, x+size, y);
+    moveSR();
+
+}
+}
