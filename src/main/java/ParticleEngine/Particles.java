@@ -9,6 +9,8 @@ package ParticleEngine;
 import processing.core.*;
 import java.util.ArrayList;
 
+import javafx.scene.input.MouseButton;
+
 public class Particles{
 
     PApplet main;
@@ -57,12 +59,8 @@ public class Particles{
             //draws the particles
         }
     }
-    public void mousePressed(){
-        for(int i=0; i<particles.size(); i++){
-            //function to change the color of the particles (doesn't work :\ )
-            particles.get(i).colorChange(particle);}
 
-    }
+
     public void keyPressed(char key){
         //adds directional inputs to the particles (also doesn't work :[ )
         if (main.key=='r'){
@@ -97,7 +95,9 @@ public class Particles{
             for(int i=0; i<particles.size(); i++){
                 //moves particles right
                 particles.get(i).rVel();}
+
+            }
+
         }
 
-    }
 }

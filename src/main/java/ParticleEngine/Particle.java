@@ -115,11 +115,12 @@ void slower(){
     void uVel(){
         yVel--;
     }
-    void randomVel(){
-        // xVel=;
-        // yVel=;
+    void ResetPosS(){
+        System.out.println("resetting");
+        yVel = 100;
+        xVel = 100;
+        
     }
-
     public void colorChange(Particle particle_) {
         particle_.main.color(main.random(255), main.random(255), main.random(255));
     }
