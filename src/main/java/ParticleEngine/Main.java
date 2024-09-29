@@ -32,6 +32,9 @@ public class Main extends PApplet{
     public void keyPressed(){
         particles.keyPressed(key);//calls the particles key pressed function
     }
+    public void mousePressed(){
+        particles.mousePressed();
+    }
 
 
 }

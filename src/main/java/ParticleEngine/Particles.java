@@ -103,8 +103,9 @@ public class Particles{
             }
 
         }
-        void MousePressed(){
-            // MouseBurst();
+        void mousePressed(){
+            for(int i=0; i<particles.size(); i++){}
+            particles.get(i).MouseBurst();
         }
 
 }

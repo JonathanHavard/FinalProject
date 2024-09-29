@@ -145,21 +145,20 @@ void slower(){
         y_direction*=-1;
         x_direction*=-1;
     }
-}
-//     public void MouseBurst(){
-//     //     if (x<mouseX){
-//     //         xVel+=5;
-//     //     }
-//     //     if (x>mouseX){
-//     //         xVel-=5;
-//     //     }
-//     //     if (y<mouseY){
-//     //         xVel+=5;
-//     //     }
-//     //     if (x>mouseX){
-//     //         xVel-=5;
-//     //     }
-//     // }
+    public void MouseBurst(){
+        if (x<mouseX){
+            xVel+=5;
+        }
+        if (x>mouseX){
+            xVel-=5;
+        }
+        if (y<mouseY){
+            xVel+=5;
+        }
+        if (x>mouseX){
+            xVel-=5;
+        }
+    }
     
 
-// // }
+}
