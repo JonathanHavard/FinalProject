@@ -26,7 +26,8 @@ public class Particles{
     void setup(){
 
     }
-    // adds particles to the array
+    public void keyPressed(){}
+
     void init(){
         for (int i=0; i<ptCount; i++){
             //Summons a bunch of particles

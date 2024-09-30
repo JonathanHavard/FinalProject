@@ -20,22 +20,6 @@ public void draw(){
     main.square(x, y, size);
     moveP();
 
-}
-public void keyPressed(char key){
-    //adds directional inputs to the particles
-    if (main.key =='w'){
-                uVel();
-    }
-    if (main.key =='s'){
-                dVel();
-            }
-    if (main.key =='a'){
-                lVel();
-            }
-    if (main.key =='d'){
-                rVel();
-            }
-
     }
 }
 
