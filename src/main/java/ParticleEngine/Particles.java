@@ -41,8 +41,12 @@ public class Particles{
             
             Ball2 ball2 = new Ball2(x, y, 100.0f, main, main.color(255,0,0));
             particles.add(ball2);
+
             Square square = new Square(500,500, 30, main, main.color(0,255,0));
+            particles.add(square);
+            
         }
+     
     }
 
 

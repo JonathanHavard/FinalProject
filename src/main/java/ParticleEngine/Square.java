@@ -16,7 +16,7 @@ Square(float x_, float y_, float size_, PApplet main_, int c){
 
 public void draw(){
     //draws a square
-    main.fill(0,255,0);
+    main.fill(255,255,0);
     main.square(x, y, size);
     moveP();
 

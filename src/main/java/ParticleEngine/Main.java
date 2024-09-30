@@ -26,20 +26,18 @@ public class Main extends PApplet{
     public void setup(){
         particles.setup();
         particles.init();
-        Square.draw();
     }
     public void draw(){ //draws particles
         this.background(0);
         particles.draw();
     }
     public void keyPressed(){
-        Particles.keyPressed(key);//calls the particles key pressed function
+        Square keyPressed(key);//calls the particles key pressed function
     }
     public void mousePressed(){
         // particles.mousePressed();
     }
     ArrayList<Particle> particle;
     //hold particles together
-
 
 }
