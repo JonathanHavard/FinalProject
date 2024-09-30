@@ -31,11 +31,13 @@ public class Particle {
     
         maxVel = 50;
         minVel = 1;
-        xVel = main.random(-10, 10);
-        yVel = main.random(-10, 10);
-        x = 500;
-        y = 500;
-        size = main.random(10, 50);
+        xVel = main.random(20);
+        x_direction= main.random(-1,1);
+        y_direction= main.random(-1,1);
+        yVel = main.random(5);
+        x = main.random(0,1000);
+        y = main.random(0,1000);
+        size = 50;
     }
 
     void move(){
@@ -51,17 +53,7 @@ public class Particle {
 
         }
     }
-    void moveS(){
-            //Special particle movement
-            
-            if (y_direction==1){
-            yVel ++;
-            }
-            else{
-            yVel --;
-            }
-        y += yVel*y_direction;
-        x += xVel*x_direction;
+    void moveP(){
         if(y>main.height || y<0){
             y_direction *= -1;
            
@@ -71,27 +63,7 @@ public class Particle {
 
         }
     }
-    void moveSR(){
-            //Special particle movement Reversed
-            
-            if (x_direction==1){
-                xVel ++;
-                }
-                else{
-                xVel --;
-                }
-            y += yVel*y_direction;
-            x += xVel*x_direction;
-            if(y>main.height || y<0){
-                y_direction *= -1;
-               
-            }
-            if(x>main.width || x<0){
-                x_direction *= -1;
-    
-            }
-    }
-
+  
     void faster(){
         //increases particle speed
         if (yVel<maxVel){
@@ -113,52 +85,29 @@ void slower(){
     xVel*=0.9;
     }
 }
-    void lVel(){
-        if (x_direction == 1){
-        xVel--;
-        }
-        if (x_direction == -1){
-            xVel++;
-            }
+void lVel(){
+    if (x_direction == 1){
+    xVel--;
     }
-    void rVel(){
-        if (x_direction == 1){
-        xVel++;
-        }
-        if (x_direction == -1){
-            xVel--;
-        }
+}
+void rVel(){
+    if (x_direction == 1){
+    xVel++;
     }
-    void dVel(){
-        yVel++;
-    }
-    void uVel(){
-        yVel--;
-    }
-        
-    public void colorChange(Particle particle_) {
-        particle_.main.color(main.random(255), main.random(255), main.random(255));
-    }
+}
+void dVel(){
+    yVel++;
+}
+void uVel(){
+    yVel--;
+}
+
     public void draw() {
+        
     }
     public void Reverse(){
         y_direction*=-1;
         x_direction*=-1;
     }
-    public void MouseBurst(){
-        if (x<mouseX){
-            xVel+=5;
-        }
-        if (x>mouseX){
-            xVel-=5;
-        }
-        if (y<mouseY){
-            xVel+=5;
-        }
-        if (x>mouseX){
-            xVel-=5;
-        }
-    }
-    
 
 }

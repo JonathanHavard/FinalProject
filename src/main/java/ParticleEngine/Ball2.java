@@ -16,10 +16,10 @@ Ball2(float x_, float y_, float radius_, PApplet main_, int c){
 
 public void draw(){
     //draws an ellipse
-    main.fill(particleColor);
+    main.fill(255,0,0);
     main.ellipse(x, y, size, size);
-    main.line(x-size, y, x+size, y);
-    moveSR();
+    main.line(x-(size/2), y, x+(size/2), y);
+    move();
 
 }
 }

@@ -16,9 +16,8 @@ public class Particles{
     ArrayList<Particle> particles;
 
     Particle particle;
-    int ptCount = 400;
+    int ptCount = 50;
     //maximum particle count
-    int maxRad = 40;
 
     Particles(PApplet main_){
         main = main_;
@@ -35,19 +34,14 @@ public class Particles{
             //random location x
             float y = main.random(main.height);
             //random location y
-            float red = main.random(255);
-            float green = main.random(255);
-            float blue = main.random(255);
             
 
-            Ball ball = new Ball(x, y, 100.0f, main.color(red,green,blue), main);
+            Ball ball = new Ball(x, y, 100.0f, main.color(0,255,50), main);
             particles.add(ball);
             
-            Ball2 ball2 = new Ball2(x, y, 100.0f, main, main.color(red,green,blue));
+            Ball2 ball2 = new Ball2(x, y, 100.0f, main, main.color(255,0,0));
             particles.add(ball2);
-            
-            Square square = new Square(x, y, 100.0f, main, main.color(red, green, blue));
-            particles.add(square);
+            Square square = new Square(500,500, 30, main, main.color(0,255,0));
         }
     }
 
@@ -57,55 +51,21 @@ public class Particles{
             particles.get(i).draw();
             //draws the particles
         }
+        
     }
 
 
-    public void keyPressed(char key){
-        //adds directional inputs to the particles (also doesn't work :[ )
-        if (main.key=='r'){
-        
-        }
-        if (key == 'q'){
-            for(int i=0; i<particles.size(); i++){
-                //speeds up particles
-                particles.get(i).faster();}
-        }
-        if (main.key == 'e'){
-            for(int i=0; i<particles.size(); i++){
-                //slows particles
-                particles.get(i).slower();}
-        }
-        if (main.key =='w'){
-            for(int i=0; i<particles.size(); i++){
-                //moves particles up
-                particles.get(i).uVel();}
-        }
-        if (main.key =='s'){
-            for(int i=0; i<particles.size(); i++){
-                //moves particles down
-                particles.get(i).dVel();}
-        }
-        if (main.key =='a'){
-            for(int i=0; i<particles.size(); i++){
-                //moves particles left
-                particles.get(i).lVel();}
-        }
-        if (main.key =='d'){
-            for(int i=0; i<particles.size(); i++){
-                //moves particles right
-                particles.get(i).rVel();}
 
-        }
-        if (main.key =='z'){
-            for(int i=0; i<particles.size(); i++){
-                //moves particles right
-                particles.get(i).Reverse();}
-            }
-
-        }
-        void mousePressed(){
-            for(int i=0; i<particles.size(); i++){}
-            particles.get(i).MouseBurst();
-        }
-
+    
 }
+    //     if (main.key =='z'){
+    //         for(int i=0; i<particles.size(); i++){
+    //             //moves particles right
+    //             particles.get(i).Reverse();}
+    //         }
+
+    //     }
+        // void mousePressed(){
+        //     for(int i=0; i<particles.size(); i++){}
+        //     particles.get(i).MouseBurst();
+        // }

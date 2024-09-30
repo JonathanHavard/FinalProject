@@ -16,7 +16,7 @@ Ball(float x_, float y_, float radius_, int c, PApplet main_){
 
 public void draw(){
     //draws an ellipse
-    main.fill(particleColor);
+    main.fill(0,255,20);
     main.ellipse(x, y, size, size);
     move();
 

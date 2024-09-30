@@ -7,6 +7,8 @@
 
 package ParticleEngine;
 
+import java.util.ArrayList;
+
 import processing.core.*;
 
 public class Main extends PApplet{
@@ -24,17 +26,20 @@ public class Main extends PApplet{
     public void setup(){
         particles.setup();
         particles.init();
+        Square.draw();
     }
     public void draw(){ //draws particles
         this.background(0);
         particles.draw();
     }
     public void keyPressed(){
-        particles.keyPressed(key);//calls the particles key pressed function
+        Particles.keyPressed(key);//calls the particles key pressed function
     }
     public void mousePressed(){
-        particles.mousePressed();
+        // particles.mousePressed();
     }
+    ArrayList<Particle> particle;
+    //hold particles together
 
 
 }
