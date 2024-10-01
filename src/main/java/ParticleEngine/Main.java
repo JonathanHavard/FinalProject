@@ -48,9 +48,13 @@ public class Main extends PApplet{
     //All the bumpers
     ArrayList<Particles> particle;
 
-    particle.addAll(ball);
-    particle.addAll(ball2);
-    particle.addAll(square);
+    // particle.addAll(ball);
+    // particle.addAll(ball2);
+    // particle.addAll(square);
+
+    public void keyPressed(){
+
+    }
     
     
     

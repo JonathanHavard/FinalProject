@@ -51,7 +51,7 @@ import processing.core.*;
             gameOver()
         }
         if (radius ==100){
-            
+            gameOver()
         }
 
 }

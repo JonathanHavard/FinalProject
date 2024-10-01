@@ -20,6 +20,7 @@ public void draw(){
     main.square(x, y, size);
     moveP();
 
-    }
+    
+}
 }
 

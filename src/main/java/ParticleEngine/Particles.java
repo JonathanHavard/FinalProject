@@ -45,6 +45,10 @@ public class Particles{
 
             Square square = new Square(500,500, 30, main, main.color(0,255,0));
             particles.add(square);
+
+            Player player = new Player(x, y, 100.0f, main.color(255,0,0), main);
+            particles.add(player);
+            //for some reason it causes the entire window to not work....
             
         }
      
@@ -55,6 +59,14 @@ public class Particles{
         for (int i=0; i<ptCount/2; i++){
             particles.get(i).draw();
             //draws the particles
+        }
+        
+    }
+    public void collision(float x1, float y1, float size1, float x2, float y2, float size2){
+        boolean collided;
+        for (int i=0; i<size; i++){
+            if(x1+ size == x2);
+            //.....I don't know....
         }
         
     }
