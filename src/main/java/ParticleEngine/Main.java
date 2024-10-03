@@ -20,7 +20,7 @@ public class Main extends PApplet{
 
     public void settings(){
         //Changes the size of the screen
-        size(1000,1000);
+        size(1000,700);
         particles = new Particles(this); //instantiates particle
     }
     public void setup(){
@@ -31,32 +31,10 @@ public class Main extends PApplet{
         this.background(0);
         particles.draw();
     }
-    // // public void keyPressed(){
-    // //     Particles.keyPressed(key);//calls the particles key pressed function
-    // }
+    public void keyPressed(){
+        particles.keyPressed();//calls the particles key pressed function
+    }
     public void mousePressed(){
         // particles.mousePressed();
     }
-    ArrayList<Ball> ball;
-    int ballCount = 20;
-    //All the good items
-    ArrayList<Ball2> ball2;
-    int ball2Count = 20;
-    //All the bad items
-    ArrayList<Square> square;
-    int squareCount = 7;
-    //All the bumpers
-    ArrayList<Particles> particle;
-
-    // particle.addAll(ball);
-    // particle.addAll(ball2);
-    // particle.addAll(square);
-
-    public void keyPressed(){
-
-    }
-    
-    
-    
-
 }

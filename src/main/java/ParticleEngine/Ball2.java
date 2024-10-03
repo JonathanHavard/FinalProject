@@ -20,6 +20,5 @@ public void draw(){
     main.ellipse(x, y, size, size);
     main.line(x-(size/2), y, x+(size/2), y);
     move();
-
-}
+    }
 }

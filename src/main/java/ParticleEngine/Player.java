@@ -15,44 +15,53 @@ import processing.core.*;
         
         public void draw(){
             //draws an ellipse
-            main.fill(255,0,0);
-            main.ellipse(500, 500, size, size);
-            main.line(x-(size/2), y, x+(size/2), y);
-            move();
-        
+            main.fill(particleColor);
+            main.square(x, y, size);
+            move();  
         }
 
-        public void keyPressed(char key){
+
+        public void keyPressed(){
             //adds directional inputs to the particles
+            
             if (main.key =='w'){
-                        uVel();
+                        y_direction=-1;
+                        yVel = 10;
+                        x_direction =0;
             }
             if (main.key =='s'){
-                        dVel();
+                        y_direction=1;
+                        yVel = 10;
+                        x_direction =0;
                     }
             if (main.key =='a'){
-                        lVel();
+                        x_direction=-1;
+                        xVel = 10;
+                        y_direction = 0;
                     }
             if (main.key =='d'){
-                        rVel();
+                        x_direction=1;
+                        xVel = 10;
+                        y_direction = 0;
                     }
         
             }
-            radius =30;
-        damageTaken(){
-            radius -=5;
-            Player.Draw();
-        }
-        pointGained(){
-            radius +=5;
-            Player.Draw();
-        }
-        if (radius==0){
-            gameOver()
-        }
-        if (radius ==100){
-            gameOver()
-        }
+        
+        //     radius =30;
+        // damageTaken(){
+        //     radius -=5;
+        //     Player.Draw();
+        // }
+        // pointGained(){
+        //     radius +=5;
+        //     Player.Draw();
+        // }
+        // if (radius==0){
+        //     gameOver()
+        // }
+        // if (radius ==100){
+        //     gameOver()
+        // }
 
 }
 

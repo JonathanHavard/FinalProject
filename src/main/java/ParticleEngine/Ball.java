@@ -17,8 +17,7 @@ Ball(float x_, float y_, float radius_, int c, PApplet main_){
 public void draw(){
     //draws an ellipse
     main.fill(0,255,20);
-    main.ellipse(x, y, size, size);
+    main.ellipse(x, y, size/2, size/2);
     move();
-
-}
+    }
 }
