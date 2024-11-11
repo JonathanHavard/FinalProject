@@ -8,22 +8,27 @@ public class CursorCircle extends Icon {//Make the program to draw icons also dr
     }
         public void draw(){
             //draws an ellipse
-            main.ellipse(x, y, size/2, size/2);
+            main.ellipse(x, y, size+10, size+10);
             main.fill(IconColor);
+
             }
 
-            int selection = 0;{
-                        //CODE IS TEMPORARY WILL CHANGE DEPENDING ON THE ARRAY LIS
-            if(selection == 0 && main.keyPressed){
+            int selection = 0;
+        void keyPressed(){
+            boolean canSelect = true;//This is a boolean that allows you to move through a list one at a time
+                //CODE IS TEMPORARY WILL CHANGE DEPENDING ON THE ARRAY LIS
+            if(selection == 0 && canSelect == true){
                 selection = 1;
+                canSelect = false;
                 System.out.println(selection);
-            }
-            if(selection == 1 && main.keyPressed){
-                selection = 0;
-                System.out.println(selection);
-            }
         }
-        void keyPressed(){}
+            if(selection == 1 && canSelect == true){
+                selection = 0;
+                canSelect = false;
+                System.out.println(selection);
+        }
+        canSelect = true;
+    }
 }
 
 

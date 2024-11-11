@@ -8,7 +8,13 @@ public class CircleIcon extends Icon{
     }
 public void draw(){
     //draws an ellipse
-    main.ellipse(x, y, size/2, size/2);
+    main.ellipse(x, y, size, size);
     main.fill(IconColor);
+    }
+    float getX(){
+        return x;
+    }
+    float getY(){
+        return y;
     }
 }
