@@ -4,19 +4,26 @@ import processing.core.PApplet;
 
 public class MainMenu extends PApplet{
     
-    CircleIcon icon = new CircleIcon(420, 210, 100, 255, this);
-    CircleIcon icon2 = new CircleIcon(220, 210, 100, 255, this); // LATER CREATE AN ARRAY LIST OF ICONS
-    CursorCircle cursor = new CursorCircle(420, 210, 100, 255, this);
+    CircleIcon icon = new CircleIcon(MAX_FLOAT, DISABLE_KEY_REPEAT, RADIUS, ARC, null);
+    CircleIcon icon2 = new CircleIcon(MAX_FLOAT, DISABLE_KEY_REPEAT, RADIUS, ARC, null);
+    CursorCircle cursor = new CursorCircle(MAX_FLOAT, DISABLE_KEY_REPEAT, RADIUS, ARC, null);
 
-    MainMenu(Main main_, CircleIcon icon_, CircleIcon icon2_, CursorCircle cursor_){
+    MainMenu(MenuManager main_, CircleIcon icon_, CircleIcon icon2_, CursorCircle cursor_){
         main = main_;
         icon = icon_;
         icon2 = icon2_;
         cursor = cursor_;
+        // CircleIcon icon = icon_;
+        // CircleIcon icon2 = icon2_;
+        // CursorCircle cursor = cursor_;
+        // main = main_;
+        // icon = icon_;
+        // icon2 = icon2_;
+        // cursor = cursor_;
         
     }
 
-    PApplet main;
+    MenuManager main;
 
 
 public void keyPressed(){

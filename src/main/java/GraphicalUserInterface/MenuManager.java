@@ -3,15 +3,17 @@ package GraphicalUserInterface;
 import processing.core.PApplet;
 
 public class MenuManager{
-    MenuManager(Main main, CircleIcon ico1, CircleIcon ico2, CursorCircle cursor){
-        main = main_;
+    CircleIcon ico1 = new CircleIcon(0, 0, 0, 0, mainMenu);
+    CircleIcon ico2 = new CircleIcon(0, 0, 0, 0, mainMenu);
+    CursorCircle cursor = new CursorCircle(0, 0, 0, 0, null);
+
+    MenuManager(Main main, CircleIcon ico1_, CircleIcon ico2_, CursorCircle cursor_){
         ico1 = ico1_;
         ico2 = ico2_;
         cursor = cursor_;
     }
-    MainMenu mainMenu = new MainMenu(null, null, null, null);
+    MainMenu mainMenu = new MainMenu(this, ico1, ico2, cursor);
     public void setup(){
         mainMenu.draw();
-    }
-        
+    }  
 }

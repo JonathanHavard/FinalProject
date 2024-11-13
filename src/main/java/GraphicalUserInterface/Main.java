@@ -26,9 +26,9 @@ public class Main extends PApplet{
     {
         CircleIcon icon = new CircleIcon(420, 210, 100, 255, this);
         CircleIcon icon2 = new CircleIcon(220, 210, 100, 255, this); // LATER CREATE AN ARRAY LIST OF ICONS
-        CursorCircle cursor = new CursorCircle(420, 210, 100, 255, this);
-        
-        MenuManager menuManager = new MenuManager();
+        CursorCircle cursor = new CursorCircle(420, 210, 100, 255, null);
+
+        MenuManager menuManager = new MenuManager(null, icon, icon2, cursor);
         menuManager.setup();
     }
 }
