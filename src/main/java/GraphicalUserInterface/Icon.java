@@ -1,9 +1,8 @@
 package GraphicalUserInterface;
 
-
 import processing.core.*;
 
-public class Icon {
+public class Icon{
     PApplet main; //the main class -- provides all the functionality of processing
 
     float x; //location of Icon
@@ -20,3 +19,29 @@ public class Icon {
         size = size_;
     }
 }
+    class IcoNode{
+
+        IcoNode nextIco;
+        String icoName;
+        int index;
+        IcoNode(String icoName) {
+            this.icoName = icoName;
+        }
+            
+        String getIcoName(){ //Returns foodName. Useless.
+            return icoName;
+        }
+        
+        public void setIcoName(String name){ //Sets foodName. Useless.
+            icoName = name;
+        }
+        
+        IcoNode getNextIco(){ //Returns next Food. Useless.
+            return nextIco;
+        }
+        
+        public void setNextFood(IcoNode nxt){ //Sets next Food. Useless.
+            nextIco = nxt;
+        }
+    }
+

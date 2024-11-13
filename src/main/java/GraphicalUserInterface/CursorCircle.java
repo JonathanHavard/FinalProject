@@ -20,12 +20,10 @@ public class CursorCircle extends Icon {//Make the program to draw icons also dr
             if(selection == 0 && canSelect == true){
                 selection = 1;
                 canSelect = false;
-                System.out.println(selection);
         }
             if(selection == 1 && canSelect == true){
                 selection = 0;
                 canSelect = false;
-                System.out.println(selection);
         }
         canSelect = true;
     }

@@ -24,33 +24,11 @@ public class Main extends PApplet{
     public void settings(){
         //Changes the size of the screen
         size(640,420);
-
-    }
-    public void setup(){
-        draw();
-        
     }
 
-    public void keyPressed(){
-        cursor.keyPressed();
-        if (cursor.selection == 0){
-            cursor.x = icon.x;
-            cursor.y = icon.y;
-            draw();
-        }
-        if (cursor.selection == 1){
-            cursor.x = icon2.x;
-            cursor.y = icon2.y;
-            draw();
-        }
+    public void setup()
+    {
+        MenuManager menuManager = new MenuManager();
+        menuManager.setup();
     }
-
-    public void draw(){
-        this.background(66,96,235);
-        cursor.draw();
-        icon2.draw();
-        icon.draw();// LATER CREATE AN ARRAY LIST OF ICONS
-    }
-    
-    
 }
