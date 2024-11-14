@@ -32,7 +32,7 @@ public class MainMenu {
     public void draw(PApplet main){
         main.background(66,96,235);
         cursor.draw(main);
-        icon2.draw(main);
-        icon.draw(main);// LATER CREATE AN ARRAY LIST OF ICONS
+        icon2.draw(main, "Photos");
+        icon.draw(main, "Music");// LATER CREATE AN ARRAY LIST OF ICONS
     }
 }

@@ -14,6 +14,7 @@ public class Main extends PApplet {
 
     public static void main(String[] args) {
         PApplet.main("GraphicalUserInterface.Main");
+        
     }
 
     public void settings(){
@@ -33,6 +34,19 @@ public class Main extends PApplet {
     }
 
     public void keyPressed(){
-        menuManager.keyPressed();
-    }
-}
+        char keyP;
+        keyP = key;
+        // if (key == 'a'){
+        //     menuManager.setState("main");
+        // }
+        // if (key == 'b'){
+        //     menuManager.setState("photo");
+        // }
+        // if (key == 'c'){
+        //     menuManager.setState("music");
+        // }
+        menuManager.keyPressed(keyP);
+        }
+
+        }
+

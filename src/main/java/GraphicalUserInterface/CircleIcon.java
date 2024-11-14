@@ -7,10 +7,11 @@ public class CircleIcon extends Icon {
         super(x, y, radius, c);
     }
 
-    public void draw(PApplet main) {
+    public void draw(PApplet main, String text) {
         //draws an ellipse
         main.ellipse(x, y, size, size);
         main.fill(iconColor);
+        main.text(text, x, y);
     }
 
     float getX() {
