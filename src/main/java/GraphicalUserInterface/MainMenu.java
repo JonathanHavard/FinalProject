@@ -8,6 +8,8 @@ public class MainMenu extends PApplet{
     CircleIcon icon2 = new CircleIcon(MAX_FLOAT, DISABLE_KEY_REPEAT, RADIUS, ARC, null);
     CursorCircle cursor = new CursorCircle(MAX_FLOAT, DISABLE_KEY_REPEAT, RADIUS, ARC, null);
 
+
+
     MainMenu(MenuManager main_, CircleIcon icon_, CircleIcon icon2_, CursorCircle cursor_){
         main = main_;
         icon = icon_;
