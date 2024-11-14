@@ -9,17 +9,14 @@ public class Icon{
     float y; //location of Icon
     float size; //Icon size
     static int IconColor;
-    Icon(float x_, float y_, float size_, int c, MenuManager main_){
+    Icon(float x_, float y_, float size_, int c, PApplet main_){
         x = x_;
         y = y_;
         size = size_;
         IconColor = c;
     
-        // main = main_;
+        main = main_;
         size = size_;
-    }
-    public Icon(float x_, float y_, float radius_, int c, PApplet main_) {
-        //TODO Auto-generated constructor stub
     }
 }
     // public class IcoNode {
