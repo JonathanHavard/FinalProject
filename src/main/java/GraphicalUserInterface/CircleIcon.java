@@ -2,19 +2,22 @@ package GraphicalUserInterface;
 
 import processing.core.*;
 
-public class CircleIcon extends Icon{
-    CircleIcon(float x_, float y_, float radius_, int c, PApplet main_){
-        super(x_, y_, radius_, c, main_);
+public class CircleIcon extends Icon {
+    CircleIcon(float x, float y, float radius, int c) {
+        super(x, y, radius, c);
     }
-public void draw(){
-    //draws an ellipse
-    main.ellipse(x, y, size, size);
-    main.fill(IconColor);
+
+    public void draw(PApplet main) {
+        //draws an ellipse
+        main.ellipse(x, y, size, size);
+        main.fill(iconColor);
     }
-    float getX(){
+
+    float getX() {
         return x;
     }
-    float getY(){
+
+    float getY() {
         return y;
     }
 }
