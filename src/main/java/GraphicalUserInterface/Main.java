@@ -7,10 +7,18 @@
 
 package GraphicalUserInterface;
 
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+
 import processing.core.*;
+
 
 public class Main extends PApplet {
     MenuManager menuManager;
+
+    static FileSystem sys = FileSystems.getDefault();
+    static String prependPath = "ImageImport"  + sys.getSeparator();
+    static String appendType = ".jpg"  + sys.getSeparator();
 
     public static void main(String[] args) {
         PApplet.main("GraphicalUserInterface.Main");
@@ -19,7 +27,8 @@ public class Main extends PApplet {
 
     public void settings(){
         //Changes the size of the screen
-        size(640,420);
+        fullScreen();
+        size(1920,1200);
         
     }
 

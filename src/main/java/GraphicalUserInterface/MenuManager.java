@@ -18,7 +18,7 @@ public class MenuManager extends Main{
     
     public void setup() {
         curState = "main";
-        mainMenu.setup();
+        mainMenu.setup(this);
     }  
 
     public void draw(PApplet main) {
