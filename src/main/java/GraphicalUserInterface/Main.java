@@ -16,9 +16,9 @@ import processing.core.*;
 public class Main extends PApplet {
     MenuManager menuManager;
 
-    static FileSystem sys = FileSystems.getDefault();
-    static String prependPath = "ImageImport"  + sys.getSeparator();
-    static String appendType = ".jpg"  + sys.getSeparator();
+    // static FileSystem sys = FileSystems.getDefault();
+    // static String prependPath = "ImageImport"  + sys.getSeparator();
+    // static String appendType = ".jpg"  + sys.getSeparator();
 
     public static void main(String[] args) {
         PApplet.main("GraphicalUserInterface.Main");
@@ -33,7 +33,7 @@ public class Main extends PApplet {
     }
 
     public void setup() {
-        menuManager = new MenuManager();
+        menuManager = new MenuManager(this);
         menuManager.setup();
     }
     
@@ -45,15 +45,6 @@ public class Main extends PApplet {
     public void keyPressed(){
         char keyP;
         keyP = key;
-        // if (key == 'a'){
-        //     menuManager.setState("main");
-        // }
-        // if (key == 'b'){
-        //     menuManager.setState("photo");
-        // }
-        // if (key == 'c'){
-        //     menuManager.setState("music");
-        // }
         menuManager.keyPressed(keyP);
         }
 

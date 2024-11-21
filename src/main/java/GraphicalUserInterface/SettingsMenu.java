@@ -2,11 +2,11 @@ package GraphicalUserInterface;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class PhotoMenu {
+public class SettingsMenu {
     PApplet main;
     PImage musicMen;
 
-    PhotoMenu(PApplet main_) {
+    SettingsMenu(PApplet main_) {
         main = main_;
     }
 
@@ -18,6 +18,6 @@ public class PhotoMenu {
 
     public void draw(PApplet main){
         main.background(0,0,0);
-        main.text("fotos", 600, 600);
+        main.text("Settings and stuff", 600, 600);
     }
 }

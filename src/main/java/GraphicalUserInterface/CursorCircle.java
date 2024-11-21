@@ -1,18 +1,19 @@
 package GraphicalUserInterface;
-
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class CursorCircle extends Icon { // Make the program to draw icons also draw Cursor
     int selection;
-    CursorCircle(float x_, float y_, float radius_, int c) {
-        super(x_, y_, radius_, c);
+    PImage circ;
+    CursorCircle(float x_, float y_) {
+        super(x_, y_);
         selection = 0;
     }
 
     public void draw(PApplet main) {
-        //draws an ellipse
-        main.ellipse(x, y, size+10, size+10);
-        main.fill(iconColor);
+        circ = main.loadImage("imageImport/selection.png");
+        main.image(circ, x,y);
+
     }
 
             
@@ -20,16 +21,16 @@ public class CursorCircle extends Icon { // Make the program to draw icons also 
         // This is a boolean that allows you to move through a list one at a time
         boolean canSelect = true; 
 
-        // CODE IS TEMPORARY WILL CHANGE DEPENDING ON THE ARRAY LIS
-        if (selection == 0 && canSelect == true) {
-            selection = 1;
-            canSelect = false;
-        }
+        // CODE IS TEMPORARY WILL CHANGE DEPENDING ON THE 
+        // if (selection == 0 && canSelect == true) {
+        //     selection = 1;
+        //     canSelect = false;
+        // }
 
-        if (selection == 1 && canSelect == true) {
-            selection = 0;
-            canSelect = false;
-        }
+        // if (selection == 1 && canSelect == true) {
+        //     selection = 0;
+        //     canSelect = false;
+        // }
 
         canSelect = true;
     }

@@ -1,22 +1,17 @@
 package GraphicalUserInterface;
-
 import processing.core.*;
+
 
 public class Icon {
     PApplet main; //the main class -- provides all the functionality of processing
 
     float x; //location of Icon
     float y; //location of Icon
-    float size; //Icon size
-    static int iconColor;
 
-    Icon(float x_, float y_, float size_, int c) {
+
+    Icon(float x_, float y_) {
         x = x_;
         y = y_;
-        size = size_;
-        iconColor = c;
-
-        size = size_;
     }
 }
     // public class IcoNode {
