@@ -26,10 +26,26 @@ public class SettingsMenu{
         icon = new IconTxt(620, 330, "ImageImport/sqicoblck.png", "sky", 210, main);
         icon2 = new IconTxt(620, 400, "ImageImport/sqicoblck.png", "metal", 210, main);
         icon3 = new IconTxt(620, 470, "ImageImport/sqicoblck.png", "glass", 210, main);
+
+        iconm = new IconTxt(620, 330, "ImageImport/Metalic/sqicoblck.png", "sky", 210, main);
+        iconm2 = new IconTxt(620, 400, "ImageImport/Metalic/sqicoblck.png", "metal", 210, main);
+        iconm3 = new IconTxt(620, 470, "ImageImport/Metalic/sqicoblck.png", "glass", 210, main);
+
+        icong = new IconTxt(620, 330, "ImageImport/Glass/sqicoblck.png", "sky", 210, main);
+        icong2 = new IconTxt(620, 400, "ImageImport/Glass/sqicoblck.png", "metal", 210, main);
+        icong3 = new IconTxt(620, 470, "ImageImport/Glass/sqicoblck.png", "glass", 210, main);
     }
     IconTxt icon;
     IconTxt icon2;
     IconTxt icon3;
+
+    IconTxt iconm;
+    IconTxt iconm2;
+    IconTxt iconm3;
+
+    IconTxt icong;
+    IconTxt icong2;
+    IconTxt icong3;
 
     public void keyPressed(char key) {
         if (key == 'w'){
@@ -71,20 +87,26 @@ public class SettingsMenu{
         settingsMen = main.loadImage("ImageImport/sbg.png");
         main.image(settingsMen, 490, 200);
         SelectionInd(icon.x, icon.y, main);
+        icon.draw(main);
+        icon2.draw(main);
+        icon3.draw(main);
         }
         if(theme == "metal"){
         metalMen = main.loadImage("ImageImport/Metalic/sbg.png");
         main.image(metalMen, 490, 200);
         SelectionInd(icon2.x, icon2.y, main);
+        iconm.draw(main);
+        iconm2.draw(main);
+        iconm3.draw(main);
         }
         if(theme == "glass"){
         settingsMen = main.loadImage("ImageImport/Glass/sbg.png");
         main.image(settingsMen, 490, 200);
         SelectionInd(icon3.x, icon3.y, main);
+        icong.draw(main);
+        icong2.draw(main);
+        icong3.draw(main);
         }
-        icon.draw(main);
-        icon2.draw(main);
-        icon3.draw(main);
         if (selectionLength == 0){
             Cursor(icon.x, icon.y, main);
         }

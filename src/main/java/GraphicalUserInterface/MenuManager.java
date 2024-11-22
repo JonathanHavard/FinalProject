@@ -85,6 +85,7 @@ public class MenuManager{
             }
             if (curState == "photo"){
                 photoMenu.keyPressed(keyP);
+                photoMenu.keyReleased(keyP);
             }
             if (curState == "calendar"){
                 calendarMenu.keyPressed(keyP);
@@ -98,15 +99,6 @@ public class MenuManager{
          if(keyP == 'q'){
             curState = "main";
          }
-         if (keyP == 'r'){//TODO Temp
-            setTheme("metal");
-        }
-        if (keyP == 'e'){//TODO Temp
-            setTheme("main");
-        }
-        if (keyP == 't'){
-            setTheme("glass");
-        }
 
     }
     }
