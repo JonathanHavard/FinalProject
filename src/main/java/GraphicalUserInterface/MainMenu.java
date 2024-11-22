@@ -18,6 +18,11 @@ public class MainMenu{
         iconm3 = new Icon(620, 500, "ImageImport/Metalic/camera.png", main);
         iconm4 = new Icon(830, 500, "ImageImport/Metalic/settings.png", main);
 
+        icong = new Icon(620, 330, "ImageImport/Glass/calendar.png", main);
+        icong2 = new Icon(830, 330, "ImageImport/Glass/music.png", main);
+        icong3 = new Icon(620, 500, "ImageImport/Glass/camera.png", main);
+        icong4 = new Icon(830, 500, "ImageImport/Glass/settings.png", main);
+
     }
     Icon icon;
     Icon icon2;
@@ -29,24 +34,28 @@ public class MainMenu{
     Icon iconm3;
     Icon iconm4;
 
-
+    Icon icong;
+    Icon icong2;
+    Icon icong3;
+    Icon icong4;
 
     Cursor cursor;
     DisplayScreen displayScreen;
     PImage mainMen;
     PImage metalMen;
+    PImage glassMen;
 
     public void setup(PApplet main) {
         theme = "main";
         mainMen = main.loadImage("ImageImport/bg.png");
         metalMen = main.loadImage("ImageImport/Metalic/bg.png");
+        glassMen = main.loadImage("ImageImport/Glass/bg.png");
     }
     public void setTheme(String theme_){
         theme = theme_;
     }
 //SELECTIONS 0= calendar 1=music 2= photo 3= settings
     public void keyPressed(char keyP) {
-        cursor.keyPressed();
         if (keyP == 'a'){//left selection
             cursor.selection--;
             if (cursor.selection<=-1){
@@ -104,7 +113,6 @@ public class MainMenu{
         main.background(0,0,0);
         if (theme == "main"){
         main.image(mainMen, 490, 200);
-        main.fill(0,255,0);
         cursor.draw(main);
         icon.draw(main);
         icon2.draw(main);
@@ -113,14 +121,20 @@ public class MainMenu{
         }
         if (theme == "metal"){
         main.image(metalMen, 490, 200);
-        main.fill(0,255,0);
         cursor.draw(main);
         iconm.draw(main);
         iconm2.draw(main);
         iconm3.draw(main);
         iconm4.draw(main);
-
         }
+        if (theme == "glass"){
+        main.image(glassMen, 490, 200);
+        cursor.draw(main);
+        icong.draw(main);
+        icong2.draw(main);
+        icong3.draw(main);
+        icong4.draw(main);
+            }
     }
 
     public int getSelection(){
@@ -129,5 +143,4 @@ public class MainMenu{
     public void Selection(int sel){
         cursor.selection = sel;
     }
-
 }

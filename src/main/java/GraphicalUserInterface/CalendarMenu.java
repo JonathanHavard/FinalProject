@@ -8,7 +8,7 @@ public class CalendarMenu {
     Icon icon2;
     Cursor cursor;
     PApplet main;
-    PImage musicMen;
+    PImage calendarMen;
 
     CalendarMenu(PApplet main_) {
         main = main_;
@@ -23,7 +23,8 @@ public class CalendarMenu {
 
     public void draw(PApplet main){
         main.background(0,0,0);
-        main.text("cadlenar", 600, 600);
+        calendarMen = main.loadImage("ImageImport/cbg.png");
+        main.image(calendarMen, 490, 200);
         // main.image(musicMen, 650, 250);
     }
 }

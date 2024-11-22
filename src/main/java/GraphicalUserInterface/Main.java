@@ -1,10 +1,3 @@
-/*
-* Coder: Jonathan Havard
-* Date Sep 2024
-* Description: Sngine for particles
-* Notes
-*/
-
 package GraphicalUserInterface;
 
 import java.nio.file.FileSystem;
@@ -15,10 +8,6 @@ import processing.core.*;
 
 public class Main extends PApplet {
     MenuManager menuManager;
-
-    // static FileSystem sys = FileSystems.getDefault();
-    // static String prependPath = "ImageImport"  + sys.getSeparator();
-    // static String appendType = ".jpg"  + sys.getSeparator();
 
     public static void main(String[] args) {
         PApplet.main("GraphicalUserInterface.Main");

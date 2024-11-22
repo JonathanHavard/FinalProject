@@ -86,11 +86,14 @@ public class MenuManager{
          if(keyP == 'q'){
             curState = "main";
          }
-         if (keyP == 'e'){//TODO Temp
+         if (keyP == 'r'){//TODO Temp
             mainMenu.setTheme("metal");
         }
-        if (keyP == 'r'){//TODO Temp
+        if (keyP == 'e'){//TODO Temp
             mainMenu.setTheme("main");
+        }
+        if (keyP == 't'){
+            mainMenu.setTheme("glass");
         }
 
         

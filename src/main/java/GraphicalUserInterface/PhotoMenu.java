@@ -4,7 +4,7 @@ import processing.core.PImage;
 
 public class PhotoMenu {
     PApplet main;
-    PImage musicMen;
+    PImage photoMen;
 
     PhotoMenu(PApplet main_) {
         main = main_;
@@ -18,6 +18,7 @@ public class PhotoMenu {
 
     public void draw(PApplet main){
         main.background(0,0,0);
-        main.text("fotos", 600, 600);
+        photoMen = main.loadImage("ImageImport/pbg.png");
+        main.image(photoMen, 490, 200);
     }
 }

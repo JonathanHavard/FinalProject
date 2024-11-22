@@ -4,11 +4,11 @@ import processing.core.PImage;
 
 public class SettingsMenu {
     PApplet main;
-    PImage musicMen;
+    PImage settingsMen;
 
     SettingsMenu(PApplet main_) {
         main = main_;
-        icon = new IconTxt(620, 330, "ImageImport/sqicoblck.png", "sky", main);
+        icon = new IconTxt(620, 330, "ImageImport/sqicoblck.png", "sky", 210, main);
     }
     IconTxt icon;
 
@@ -19,8 +19,9 @@ public class SettingsMenu {
     }
 
     public void draw(PApplet main){
-        main.background(0,0, 255);
-        main.text("Settings and stuff", 600, 600);
+        main.background(0,0,0);
+        settingsMen = main.loadImage("ImageImport/sbg.png");
+        main.image(settingsMen, 490, 200);
         icon.draw(main);
     }
 }

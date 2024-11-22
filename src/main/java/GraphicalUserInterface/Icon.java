@@ -14,9 +14,7 @@ public class Icon extends Ico {
     public void draw(PApplet main) {
         logo = main.loadImage(text_);
         main.image(logo, x, y);
-        //draws an ellipse
-        
-        
+        //Basic Icon that loads an image No text version
     }
 
     float getX() {

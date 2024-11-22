@@ -14,7 +14,6 @@ public class MusicMenu {
     }
 
     public void setup() {
-        musicMen = main.loadImage("ImageImport/mbg.png");
     }
 
     public void keyPressed(char keyP) {

@@ -8,13 +8,14 @@ public class Cursor extends Ico{
     Cursor(float x_, float y_) {
         super(x_, y_);
         selection = 0;
-        //Defaults to the first option
     }
 
     public void draw(PApplet main) {
         circ = main.loadImage("imageImport/selection.png");
         main.image(circ, x,y);
+
     }
+
 }
 
 
