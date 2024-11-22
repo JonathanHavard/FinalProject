@@ -4,11 +4,11 @@ import processing.core.PImage;
 
 public class CalendarMenu {
     //Beginnings of a calendar menu
-    Icon icon;
-    Icon icon2;
-    Cursor cursor;
     PApplet main;
     PImage calendarMen;
+    PImage metalMen;
+    PImage glassMen;
+    String theme;
 
     CalendarMenu(PApplet main_) {
         main = main_;
@@ -21,10 +21,23 @@ public class CalendarMenu {
     public void keyPressed(char key) {
     }
 
+    public void setTheme(String theme_){
+        theme = theme_;
+    }
+
     public void draw(PApplet main){
         main.background(0,0,0);
-        calendarMen = main.loadImage("ImageImport/cbg.png");
-        main.image(calendarMen, 490, 200);
-        // main.image(musicMen, 650, 250);
+        if(theme == "main"){
+            calendarMen = main.loadImage("ImageImport/cbg.png");
+            main.image(calendarMen, 490, 200);
+        }
+        if(theme == "metal"){
+            metalMen = main.loadImage("ImageImport/Metalic/cbg.png");
+            main.image(metalMen, 490, 200);
+        }
+        if(theme == "glass"){
+            calendarMen = main.loadImage("ImageImport/Glass/cbg.png");
+            main.image(calendarMen, 490, 200);
+            }
     }
 }

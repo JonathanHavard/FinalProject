@@ -8,6 +8,7 @@ public class MusicMenu {
     Cursor cursor;
     PApplet main;
     PImage musicMen;
+    String theme;
 
     MusicMenu(PApplet main_) {
         main = main_;
@@ -19,9 +20,22 @@ public class MusicMenu {
     public void keyPressed(char keyP) {
     }
 
+    public void setTheme(String theme_){
+        theme = theme_;
+    }
+
     public void draw(PApplet main){
-        main.background(0,0,0);
-        musicMen = main.loadImage("ImageImport/mbg.png");
-        main.image(musicMen, 490, 200);
+        if(theme == "main"){
+                musicMen = main.loadImage("ImageImport/mbg.png");
+                main.image(musicMen, 490, 200);
+            }
+            if(theme == "metal"){
+                musicMen = main.loadImage("ImageImport/Metalic/mbg.png");
+                main.image(musicMen, 490, 200);
+            }
+            if(theme == "glass"){
+                musicMen = main.loadImage("ImageImport/Glass/mbg.png");
+                main.image(musicMen, 490, 200);
+            }
     }
 }

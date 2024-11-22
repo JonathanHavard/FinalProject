@@ -28,8 +28,17 @@ public class MenuManager{
     
     public void setup() {
         curState = "main";
+        setTheme("main");
         mainMenu.setup(main);
     }  
+    public void setTheme(String theme){ //Sets themes for all classes
+        mainMenu.setTheme(theme);
+        settingsMenu.setTheme(theme);
+        photoMenu.setTheme(theme);
+        musicMenu.setTheme(theme);
+        settingsMenu.setTheme(theme);
+        calendarMenu.setTheme(theme);
+    }
 
     public void draw(PApplet main) {
         if(curState == "main"){
@@ -87,15 +96,14 @@ public class MenuManager{
             curState = "main";
          }
          if (keyP == 'r'){//TODO Temp
-            mainMenu.setTheme("metal");
+            setTheme("metal");
         }
         if (keyP == 'e'){//TODO Temp
-            mainMenu.setTheme("main");
+            setTheme("main");
         }
         if (keyP == 't'){
-            mainMenu.setTheme("glass");
+            setTheme("glass");
         }
 
-        
     }
     }
