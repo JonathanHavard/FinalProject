@@ -91,6 +91,9 @@ public class MenuManager{
             }
             if (curState == "settings"){
                 settingsMenu.keyPressed(keyP);
+                if (keyP == ' '){
+                setTheme(settingsMenu.getTheme()); //This is kinda a hardcore response but its the only way I thought.
+                }
             }
          if(keyP == 'q'){
             curState = "main";
