@@ -8,7 +8,9 @@ public class SettingsMenu {
 
     SettingsMenu(PApplet main_) {
         main = main_;
+        icon = new IconTxt(620, 330, "ImageImport/sqicoblck.png", "sky", main);
     }
+    IconTxt icon;
 
     public void setup() {
     }
@@ -17,7 +19,8 @@ public class SettingsMenu {
     }
 
     public void draw(PApplet main){
-        main.background(0,0,0);
+        main.background(0,0, 255);
         main.text("Settings and stuff", 600, 600);
+        icon.draw(main);
     }
 }

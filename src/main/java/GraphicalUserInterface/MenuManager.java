@@ -11,6 +11,7 @@ public class MenuManager{
     PhotoMenu photoMenu;
     SettingsMenu settingsMenu;
     String curState;
+    String theme;
 
     MenuManager(PApplet main_){
         mainMenu = new MainMenu(main);
@@ -85,6 +86,12 @@ public class MenuManager{
          if(keyP == 'q'){
             curState = "main";
          }
+         if (keyP == 'e'){//TODO Temp
+            mainMenu.setTheme("metal");
+        }
+        if (keyP == 'r'){//TODO Temp
+            mainMenu.setTheme("main");
+        }
 
         
     }

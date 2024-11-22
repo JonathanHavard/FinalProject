@@ -3,9 +3,9 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 public class MusicMenu {
-    CircleIcon icon;
-    CircleIcon icon2;
-    CursorCircle cursor;
+    Icon icon;
+    Icon icon2;
+    Cursor cursor;
     PApplet main;
     PImage musicMen;
 
