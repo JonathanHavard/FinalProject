@@ -52,6 +52,10 @@ public class MenuManager{
         }
         if (curState == "photo"){
             photoMenu.draw(main);
+            if (photoMenu.exitStatus == true){
+                curState = "main";
+                photoMenu.exitStatus = false;
+            }
         }
         if (curState == "settings"){
             settingsMenu.draw(main);
@@ -98,6 +102,7 @@ public class MenuManager{
             }
          if(keyP == 'q'){
             curState = "main";
+            photoMenu.canSelect = false;
          }
 
     }

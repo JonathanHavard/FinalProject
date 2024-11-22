@@ -13,6 +13,7 @@ public class PhotoMenu {
     int selectionLength = 0;
     boolean imgDisplayed=false;
     boolean canSelect = false;
+    boolean exitStatus = false;
 
     PhotoMenu(PApplet main_) {
         main = main_;
@@ -22,6 +23,7 @@ public class PhotoMenu {
         icon4 = new IconTxt(770, 440, "ImageImport/sqicoblckl.png", "another_third_frog", 210, main);
         icon5 = new IconTxt(770, 510, "ImageImport/sqicoblckl.png", "a_third_third_frog", 210, main);
         icon6 = new IconTxt(770, 580, "ImageImport/sqicoblckl.png", "fourth_frog", 210, main);
+        exit = new IconTxt(770, 650, "ImageImport/sqicoblck.png", "exit", 210, main);
     }
 
     public void Cursor(float x, float y, PApplet main){
@@ -35,6 +37,7 @@ public class PhotoMenu {
     IconTxt icon4;
     IconTxt icon5;
     IconTxt icon6;
+    IconTxt exit;
 
     public void setup() {
     }
@@ -47,12 +50,12 @@ public class PhotoMenu {
         if (key == 'w'){
             selectionLength--;
             if (selectionLength == -1){
-                selectionLength = 5;
+                selectionLength = 6;
             }
         }
         if (key == 's'){
             selectionLength++;
-            if (selectionLength ==6){
+            if (selectionLength ==7){
                 selectionLength = 0;
             }
         }
@@ -92,6 +95,8 @@ public class PhotoMenu {
             icon5.draw(main);
             icon6.draw(main);
 
+            exit.draw(main);
+
             if (selectionLength == 0){
                 Cursor(icon.x, icon.y, main);
             }
@@ -110,26 +115,38 @@ public class PhotoMenu {
             if (selectionLength == 5){
                 Cursor(icon6.x, icon6.y, main);
             }
+            if (selectionLength == 6){
+                Cursor(exit.x, exit.y, main);
+            }
             if (imgDisplayed==true){
                 if (selectionLength == 0){
                     photo = main.loadImage("ImageImport/frog1.png");
+                    main.image(photo, 490, 200);
                 }
                 if (selectionLength == 1){
                     photo = main.loadImage("ImageImport/frog2.png");
+                    main.image(photo, 490, 200);
                 }
                 if (selectionLength == 2){
                     photo = main.loadImage("ImageImport/frog3.png");
+                    main.image(photo, 490, 200);
                 }
                 if (selectionLength == 3){
                     photo = main.loadImage("ImageImport/frog4.png");
+                    main.image(photo, 490, 200);
                 }
                 if (selectionLength == 4){
                     photo = main.loadImage("ImageImport/frog5.png");
+                    main.image(photo, 490, 200);
                 }
                 if (selectionLength == 5){
                     photo = main.loadImage("ImageImport/frog6.png");
+                    main.image(photo, 490, 200);
                 }
-                main.image(photo, 490, 200);
-            }
+                if (selectionLength == 6){
+                    selectionLength = 0;
+                    exitStatus = true;
+                }
+        }
     }
 }
