@@ -11,7 +11,7 @@ public class PhotoMenu {
     PImage photo;
     String theme;
     int selectionLength = 0;
-    boolean imgDisplayed=false;
+    boolean imgDisplayed = false;
     boolean canSelect = false;
     boolean exitStatus = false;
 
@@ -23,7 +23,7 @@ public class PhotoMenu {
         icon4 = new IconTxt(770, 440, "ImageImport/sqicoblckl.png", "another_third_frog", 210, main);
         icon5 = new IconTxt(770, 510, "ImageImport/sqicoblckl.png", "a_third_third_frog", 210, main);
         icon6 = new IconTxt(770, 580, "ImageImport/sqicoblckl.png", "fourth_frog", 210, main);
-        exit = new IconTxt(770, 650, "ImageImport/sqicoblck.png", "exit", 210, main);
+        exit = new IconTxt(770, 650, "ImageImport/sqicoblck.png", "Exit", 210, main);
     }
 
     public void Cursor(float x, float y, PApplet main){

@@ -12,6 +12,8 @@ public class MenuManager{
     SettingsMenu settingsMenu;
     String curState;
     String theme;
+    int musicSelection = -1;
+    boolean canSelectMusic;
 
     MenuManager(PApplet main_){
         mainMenu = new MainMenu(main);
@@ -46,6 +48,10 @@ public class MenuManager{
         }
         if (curState == "music"){
             musicMenu.draw(main);
+            if (musicMenu.exitStatus == true){
+                curState = "main";
+                musicMenu.exitStatus = false;
+            }
         } 
         if (curState == "calendar"){
             calendarMenu.draw(main);
@@ -59,6 +65,10 @@ public class MenuManager{
         }
         if (curState == "settings"){
             settingsMenu.draw(main);
+            if (settingsMenu.exitStatus == true){
+                curState = "main";
+                settingsMenu.exitStatus = false;
+            }
         }
     }
     public void keyPressed(char keyP){
@@ -86,13 +96,17 @@ public class MenuManager{
             }
             if (curState == "music"){
                 musicMenu.keyPressed(keyP);
+                if (keyP == ' '){
+                    musicSelection = musicMenu.getSelection();
             }
+        }
             if (curState == "photo"){
                 photoMenu.keyPressed(keyP);
                 photoMenu.keyReleased(keyP);
             }
             if (curState == "calendar"){
                 calendarMenu.keyPressed(keyP);
+
             }
             if (curState == "settings"){
                 settingsMenu.keyPressed(keyP);
@@ -106,4 +120,12 @@ public class MenuManager{
          }
 
     }
+    //Special code for the music menu
+    void setMusicExitStatus(boolean stat){
+        musicMenu.exitStatus = stat;
     }
+    void setMusicSelection(int sel){
+        musicMenu.selection = sel;
+    }
+    }
+

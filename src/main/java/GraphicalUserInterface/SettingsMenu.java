@@ -12,6 +12,9 @@ public class SettingsMenu{
     PImage glassMen;
     String theme;
     int selectionLength = 0;
+    boolean exitStatus = true;
+    boolean canSelect = true;//TODO fix this
+
     public void SelectionInd(float x,float y, PApplet main){
         main.fill(210);
         main.noStroke();
@@ -21,46 +24,61 @@ public class SettingsMenu{
         main.fill(0,255,100);
         main.triangle(x-70, y+40, x-70, y+20, x-55, y+30);
     }
+    
     SettingsMenu(PApplet main_) {
         main = main_;
         icon = new IconTxt(620, 330, "ImageImport/sqicoblck.png", "sky", 210, main);
         icon2 = new IconTxt(620, 400, "ImageImport/sqicoblck.png", "metal", 210, main);
         icon3 = new IconTxt(620, 470, "ImageImport/sqicoblck.png", "glass", 210, main);
+        icon4 = new IconTxt(620, 540, "ImageImport/sqicoblck.png", "Exit", 210, main);
+        
 
         iconm = new IconTxt(620, 330, "ImageImport/Metalic/sqicoblck.png", "sky", 210, main);
         iconm2 = new IconTxt(620, 400, "ImageImport/Metalic/sqicoblck.png", "metal", 210, main);
         iconm3 = new IconTxt(620, 470, "ImageImport/Metalic/sqicoblck.png", "glass", 210, main);
+        iconm4 = new IconTxt(620, 540, "ImageImport/Metalic/sqicoblck.png", "Exit", 210, main);
 
         icong = new IconTxt(620, 330, "ImageImport/Glass/sqicoblck.png", "sky", 210, main);
         icong2 = new IconTxt(620, 400, "ImageImport/Glass/sqicoblck.png", "metal", 210, main);
         icong3 = new IconTxt(620, 470, "ImageImport/Glass/sqicoblck.png", "glass", 210, main);
+        icong4 = new IconTxt(620, 540, "ImageImport/Glass/sqicoblck.png", "Exit", 210, main);
     }
     IconTxt icon;
     IconTxt icon2;
     IconTxt icon3;
+    IconTxt icon4;
 
     IconTxt iconm;
     IconTxt iconm2;
     IconTxt iconm3;
+    IconTxt iconm4;
 
     IconTxt icong;
     IconTxt icong2;
     IconTxt icong3;
+    IconTxt icong4;
+
+    
+    public void keyReleased(){
+        canSelect = true;
+        System.out.println("a");
+    }
 
     public void keyPressed(char key) {
         if (key == 'w'){
             selectionLength--;
             if (selectionLength == -1){
-                selectionLength = 2;
+                selectionLength = 3;
             }
         }
         if (key == 's'){
             selectionLength++;
-            if (selectionLength ==3){
+            if (selectionLength ==4){
                 selectionLength = 0;
             }
         }
         if (key == ' '){
+            if (canSelect == true){
             if (selectionLength ==0){
                 setTheme("main");
             }
@@ -70,8 +88,22 @@ public class SettingsMenu{
             if (selectionLength ==2){
                 setTheme("glass");
             }
+            if (selectionLength == 3){
+                if (theme == "main"){
+                    selectionLength =0;
+                }
+                if (theme == "metal"){
+                    selectionLength =1;
+                }
+                if (theme == "glass"){
+                    selectionLength =2;
+                }
+                exitStatus = true;
+            }
+        }
         }
     }
+
 
     public void setTheme(String theme_){
         theme = theme_;
@@ -90,6 +122,7 @@ public class SettingsMenu{
         icon.draw(main);
         icon2.draw(main);
         icon3.draw(main);
+        icon4.draw(main);
         }
         if(theme == "metal"){
         metalMen = main.loadImage("ImageImport/Metalic/sbg.png");
@@ -98,6 +131,7 @@ public class SettingsMenu{
         iconm.draw(main);
         iconm2.draw(main);
         iconm3.draw(main);
+        iconm4.draw(main);
         }
         if(theme == "glass"){
         settingsMen = main.loadImage("ImageImport/Glass/sbg.png");
@@ -106,6 +140,7 @@ public class SettingsMenu{
         icong.draw(main);
         icong2.draw(main);
         icong3.draw(main);
+        icong4.draw(main);
         }
         if (selectionLength == 0){
             Cursor(icon.x, icon.y, main);
@@ -115,6 +150,9 @@ public class SettingsMenu{
         }
         if (selectionLength == 2){
             Cursor(icon3.x, icon3.y, main);    
+        }
+        if (selectionLength ==3){
+            Cursor(icon4.x, icon4.y, main);
         }
     }
 }

@@ -2,12 +2,13 @@ package GraphicalUserInterface;
 
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
-
+import processing.sound.*;
 import processing.core.*;
 
 
 public class Main extends PApplet {
     MenuManager menuManager;
+    SoundFile sound;
 
     public static void main(String[] args) {
         PApplet.main("GraphicalUserInterface.Main");
@@ -35,7 +36,42 @@ public class Main extends PApplet {
         char keyP;
         keyP = key;
         menuManager.keyPressed(keyP);
+        if (menuManager.curState == "music"){//Special code because music is being weird
+        if (key == ' '){
+            if (sound != null){
+                sound.stop();
+                }
+            if (menuManager.musicSelection == 0){
+                if (sound != null){
+                sound.stop();
+                }
+            }
+            else{
+                if (menuManager.musicSelection == 1){
+                    sound = new SoundFile(this, "Sound/Arabesque.wav");
+                }
+                if (menuManager.musicSelection == 2){
+                    sound = new SoundFile(this, "Sound/Beneath the Mask.wav");
+                }
+                if (menuManager.musicSelection == 3){
+                    sound = new SoundFile(this, "Sound/Jesus bleiblet meine freude.wav");
+                }
+                if (menuManager.musicSelection == 4){
+                    sound = new SoundFile(this, "Sound/Gymnopédie No. 1.wav");
+                }
+                if(menuManager.musicSelection == 6){
+                    if (sound != null){
+                        sound.stop();
+                        }
+                    menuManager.setMusicExitStatus(true);
+                    menuManager.setMusicSelection(0);
+                }
+                if (sound != null){
+                sound.play();
+                }
+            }
         }
-
-        }
+    }  
+}
+}
 
