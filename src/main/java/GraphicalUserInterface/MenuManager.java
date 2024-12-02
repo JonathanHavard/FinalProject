@@ -55,6 +55,10 @@ public class MenuManager{
         } 
         if (curState == "calendar"){
             calendarMenu.draw(main);
+            if(calendarMenu.exitStatus == true){
+                curState = "main";
+                calendarMenu.exitStatus = false;
+            }
         }
         if (curState == "photo"){
             photoMenu.draw(main);
@@ -114,11 +118,6 @@ public class MenuManager{
                 setTheme(settingsMenu.getTheme()); //This is kinda a hardcore response but its the only way I thought.
                 }
             }
-         if(keyP == 'q'){
-            curState = "main";
-            photoMenu.canSelect = false;
-         }
-
     }
     //Special code for the music menu
     void setMusicExitStatus(boolean stat){

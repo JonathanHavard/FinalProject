@@ -12,7 +12,7 @@ public class SettingsMenu{
     PImage glassMen;
     String theme;
     int selectionLength = 0;
-    boolean exitStatus = true;
+    boolean exitStatus = false;
     boolean canSelect = true;//TODO fix this
 
     public void SelectionInd(float x,float y, PApplet main){

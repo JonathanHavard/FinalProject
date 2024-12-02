@@ -24,10 +24,10 @@ public class MusicMenu{
         main = main_;
         icon = new IconTxt(770, 230, "ImageImport/sqicoblckl.png", "Stop Playback", 210, main);
         icon2 = new IconTxt(770, 300, "ImageImport/sqicoblckl.png", "Arabesque No 1", 210, main);
-        icon3 = new IconTxt(770, 370, "ImageImport/sqicoblckl.png", "Beneath the Mask", 210, main);
+        icon3 = new IconTxt(770, 370, "ImageImport/sqicoblckl.png", "Claire de Lune", 210, main);
         icon4 = new IconTxt(770, 440, "ImageImport/sqicoblckl.png", "Jesus Bleibet-", 210, main);
         icon5 = new IconTxt(770, 510, "ImageImport/sqicoblckl.png", "Gymnopedie 1", 210, main);
-        icon6 = new IconTxt(770, 580, "ImageImport/sqicoblckl.png", "", 210, main);
+        icon6 = new IconTxt(770, 580, "ImageImport/sqicoblckl.png", "Impromptu", 210, main);
         exit = new IconTxt(770, 650, "ImageImport/sqicoblck.png", "Exit", 210, main);
         
     }
