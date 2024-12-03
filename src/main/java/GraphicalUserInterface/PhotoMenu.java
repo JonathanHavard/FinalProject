@@ -88,6 +88,11 @@ public class PhotoMenu {
             photoMen = main.loadImage("ImageImport/Glass/pbg.png");
             main.image(photoMen, 490, 200);
             }
+            if(theme == "frog"){
+                photoMen = main.loadImage("ImageImport/Frog/pbg.png");
+                main.image(photoMen, 490, 200);
+                }
+            
             icon.draw(main);
             icon2.draw(main);
             icon3.draw(main);

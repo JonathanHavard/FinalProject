@@ -80,6 +80,10 @@ public class MusicMenu{
                 musicMen = main.loadImage("ImageImport/Glass/mbg.png");
                 main.image(musicMen, 490, 200);
             }  
+            if(theme == "frog"){
+                musicMen = main.loadImage("ImageImport/Frog/mbg.png");
+                main.image(musicMen, 490, 200);
+            }  
             icon.draw(main);
             icon2.draw(main);
             icon3.draw(main);

@@ -60,6 +60,10 @@ public class CalendarMenu {
             calendarMen = main.loadImage("ImageImport/Glass/cbg.png");
             main.image(calendarMen, 490, 200);
         }
+        if(theme == "frog"){
+            calendarMen = main.loadImage("ImageImport/Frog/cbg.png");
+            main.image(calendarMen, 490, 200);
+        }
 
          if (selection == 0){
             cal = main.loadImage("ImageImport/jan2024.png");

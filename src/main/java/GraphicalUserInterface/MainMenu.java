@@ -23,6 +23,11 @@ public class MainMenu{
         icong3 = new Icon(620, 500, "ImageImport/Glass/camera.png", main);
         icong4 = new Icon(830, 500, "ImageImport/Glass/settings.png", main);
 
+        iconf = new Icon(620, 330, "ImageImport/Frog/calendar.png", main);
+        iconf2 = new Icon(830, 330, "ImageImport/Frog/music.png", main);
+        iconf3 = new Icon(620, 500, "ImageImport/Frog/photo.png", main);
+        iconf4 = new Icon(830, 500, "ImageImport/Frog/settings.png", main);
+
     }
     Icon icon;
     Icon icon2;
@@ -39,17 +44,25 @@ public class MainMenu{
     Icon icong3;
     Icon icong4;
 
+    Icon iconf;
+    Icon iconf2;
+    Icon iconf3;
+    Icon iconf4;
+
     Cursor cursor;
     DisplayScreen displayScreen;
     PImage mainMen;
     PImage metalMen;
     PImage glassMen;
+    PImage frogMen;
 
     public void setup(PApplet main) {
         theme = "main";
         mainMen = main.loadImage("ImageImport/bg.png");
         metalMen = main.loadImage("ImageImport/Metalic/bg.png");
         glassMen = main.loadImage("ImageImport/Glass/bg.png");
+        frogMen = main.loadImage("ImageImport/Frog/bg.png");
+
     }
     public void setTheme(String theme_){
         theme = theme_;
@@ -134,6 +147,14 @@ public class MainMenu{
         icong2.draw(main);
         icong3.draw(main);
         icong4.draw(main);
+            }
+        if (theme == "frog"){
+        main.image(frogMen, 490, 200);
+        cursor.draw(main);
+        iconf.draw(main);
+        iconf2.draw(main);
+        iconf3.draw(main);
+        iconf4.draw(main);
             }
     }
 
