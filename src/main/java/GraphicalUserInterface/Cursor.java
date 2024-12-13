@@ -14,8 +14,7 @@ public class Cursor extends Ico{
         circ = main.loadImage("imageImport/selection.png");
         main.image(circ, x,y);
 
-    }
-
+    } 
 }
 
 

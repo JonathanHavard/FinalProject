@@ -13,7 +13,7 @@ public class SettingsMenu{
     String theme;
     int selectionLength = 0;
     boolean exitStatus = false;
-    boolean canSelect = true;//TODO fix this
+    boolean canSelect = true;
 
     public void SelectionInd(float x,float y, PApplet main){
         main.fill(210);
@@ -161,7 +161,7 @@ public class SettingsMenu{
         if(theme == "frog"){
             settingsMen = main.loadImage("ImageImport/Frog/sbg.png");
             main.image(settingsMen, 490, 200);
-            SelectionInd(icon3.x, icon3.y, main);
+            SelectionInd(icon4.x, icon4.y, main);
             icon.draw(main);
             icon2.draw(main);
             icon3.draw(main);
